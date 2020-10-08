@@ -7,7 +7,11 @@ option go_package = "hellogrpcv1";
 import "google/api/annotations.proto";
 import "google/protobuf/timestamp.proto";
 
+import "hello-proto/v1/types.proto";
+
 service HelloAPI {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+
   rpc Hello(HelloRequest) returns (HelloResponse) {
     option (google.api.http) = {
       post: "/greet"
@@ -23,4 +27,16 @@ message HelloRequest {
 message HelloResponse {
   string greeting = 1;
   google.protobuf.Timestamp greet_time = 2;
+}
+
+message CreateUserRequest {
+  string auth_id = 1;
+  AuthType auth_type = 2;
+  string name = 3;
+  int32 age = 4;
+  string country = 5;
+}
+
+message CreateUserResponse {
+  User user = 1;
 }

@@ -4,10 +4,19 @@
 ## Table of Contents
 
 - [hello-proto/v1/hello_api.proto](#hello-proto/v1/hello_api.proto)
+    - [CreateUserRequest](#boilerplates.hellogrpc.v1.CreateUserRequest)
+    - [CreateUserResponse](#boilerplates.hellogrpc.v1.CreateUserResponse)
     - [HelloRequest](#boilerplates.hellogrpc.v1.HelloRequest)
     - [HelloResponse](#boilerplates.hellogrpc.v1.HelloResponse)
   
     - [HelloAPI](#boilerplates.hellogrpc.v1.HelloAPI)
+  
+- [hello-proto/v1/types.proto](#hello-proto/v1/types.proto)
+    - [User](#boilerplates.hellogrpc.v1.User)
+  
+    - [AuthType](#boilerplates.hellogrpc.v1.AuthType)
+    - [DeletionReason](#boilerplates.hellogrpc.v1.DeletionReason)
+    - [GenderType](#boilerplates.hellogrpc.v1.GenderType)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -17,6 +26,40 @@
 <p align="right"><a href="#top">Top</a></p>
 
 ## hello-proto/v1/hello_api.proto
+
+
+
+<a name="boilerplates.hellogrpc.v1.CreateUserRequest"></a>
+
+### CreateUserRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| auth_id | [string](#string) |  |  |
+| auth_type | [AuthType](#boilerplates.hellogrpc.v1.AuthType) |  |  |
+| name | [string](#string) |  |  |
+| age | [int32](#int32) |  |  |
+| country | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="boilerplates.hellogrpc.v1.CreateUserResponse"></a>
+
+### CreateUserResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [User](#boilerplates.hellogrpc.v1.User) |  |  |
+
+
+
 
 
 
@@ -64,7 +107,99 @@
 
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
+| CreateUser | [CreateUserRequest](#boilerplates.hellogrpc.v1.CreateUserRequest) | [CreateUserResponse](#boilerplates.hellogrpc.v1.CreateUserResponse) |  |
 | Hello | [HelloRequest](#boilerplates.hellogrpc.v1.HelloRequest) | [HelloResponse](#boilerplates.hellogrpc.v1.HelloResponse) |  |
+
+ 
+
+
+
+<a name="hello-proto/v1/types.proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## hello-proto/v1/types.proto
+
+
+
+<a name="boilerplates.hellogrpc.v1.User"></a>
+
+### User
+This is a leading comment for a message
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) |  | the uuid of user |
+| name | [string](#string) |  |  |
+| age | [int32](#int32) |  |  |
+| wink_id | [string](#string) |  | unique value for each user |
+| country | [string](#string) |  |  |
+| gender | [GenderType](#boilerplates.hellogrpc.v1.GenderType) |  |  |
+| about | [string](#string) |  |  |
+| auth_type | [AuthType](#boilerplates.hellogrpc.v1.AuthType) |  |  |
+| birthday | [string](#string) |  | birthday of this user |
+| deletion_reason | [DeletionReason](#boilerplates.hellogrpc.v1.DeletionReason) |  |  |
+| create_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
+| update_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
+| delete_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
+| snap_name | [string](#string) |  | snapchat username |
+
+
+
+
+
+ 
+
+
+<a name="boilerplates.hellogrpc.v1.AuthType"></a>
+
+### AuthType
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| AUTH_TYPE_INVALID | 0 |  |
+| AUTH_TYPE_PHONE | 1 |  |
+| AUTH_TYPE_SNAP | 2 |  |
+
+
+
+<a name="boilerplates.hellogrpc.v1.DeletionReason"></a>
+
+### DeletionReason
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| DELETION_REASON_INVALID | 0 |  |
+| DELETION_REASON_SELF_DELETION | 1 |  |
+| DELETION_REASON_BOT_BEHAVIOUR | 2 |  |
+| DELETION_REASON_NUDITY | 3 |  |
+| DELETION_REASON_SEXUAL_ACTIVITY | 4 |  |
+| DELETION_REASON_ADULT_TOYS | 5 |  |
+| DELETION_REASON_UNDERWEAR | 6 |  |
+| DELETION_REASON_PHYSICAL_VIOLENCE | 7 |  |
+| DELETION_REASON_WEAPON_VIOLENCE | 8 |  |
+| DELETION_REASON_WEAPONS | 9 |  |
+| DELETION_REASON_SELF_INJURY | 10 |  |
+
+
+
+<a name="boilerplates.hellogrpc.v1.GenderType"></a>
+
+### GenderType
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| GENDER_TYPE_INVALID | 0 |  |
+| GENDER_TYPE_MALE | 1 |  |
+| GENDER_TYPE_FEMALE | 2 |  |
+
+
+ 
+
+ 
 
  
 
