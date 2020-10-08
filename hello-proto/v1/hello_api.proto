@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package boilerplates.hellogrpc.v1;
+
+option go_package = "hellogrpcv1";
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+service HelloAPI {
+  rpc Hello(HelloRequest) returns (HelloResponse) {
+    option (google.api.http) = {
+      post: "/greet"
+      body: "*"
+    };
+  }
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string greeting = 1;
+  google.protobuf.Timestamp greet_time = 2;
+}
