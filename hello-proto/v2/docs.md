@@ -4,19 +4,19 @@
 ## Table of Contents
 
 - [hello-proto/v2/hello_api.proto](#hello-proto/v2/hello_api.proto)
-    - [CreateUserRequest](#boilerplates.hellogrpc.v2.CreateUserRequest)
-    - [CreateUserResponse](#boilerplates.hellogrpc.v2.CreateUserResponse)
-    - [HelloRequest](#boilerplates.hellogrpc.v2.HelloRequest)
-    - [HelloResponse](#boilerplates.hellogrpc.v2.HelloResponse)
+    - [CreateUserRequest](#helloproto.v2.CreateUserRequest)
+    - [CreateUserResponse](#helloproto.v2.CreateUserResponse)
+    - [HelloRequest](#helloproto.v2.HelloRequest)
+    - [HelloResponse](#helloproto.v2.HelloResponse)
   
-    - [HelloAPI](#boilerplates.hellogrpc.v2.HelloAPI)
+    - [HelloAPI](#helloproto.v2.HelloAPI)
   
 - [hello-proto/v2/types.proto](#hello-proto/v2/types.proto)
-    - [User](#boilerplates.hellogrpc.v2.User)
+    - [User](#helloproto.v2.User)
   
-    - [AuthType](#boilerplates.hellogrpc.v2.AuthType)
-    - [DeletionReason](#boilerplates.hellogrpc.v2.DeletionReason)
-    - [GenderType](#boilerplates.hellogrpc.v2.GenderType)
+    - [AuthType](#helloproto.v2.AuthType)
+    - [DeletionReason](#helloproto.v2.DeletionReason)
+    - [GenderType](#helloproto.v2.GenderType)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -29,7 +29,7 @@
 
 
 
-<a name="boilerplates.hellogrpc.v2.CreateUserRequest"></a>
+<a name="helloproto.v2.CreateUserRequest"></a>
 
 ### CreateUserRequest
 
@@ -38,7 +38,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | auth_id | [string](#string) |  |  |
-| auth_type | [AuthType](#boilerplates.hellogrpc.v2.AuthType) |  |  |
+| auth_type | [AuthType](#helloproto.v2.AuthType) |  |  |
 | name | [string](#string) |  |  |
 | age | [int32](#int32) |  |  |
 | country | [string](#string) |  |  |
@@ -48,7 +48,7 @@
 
 
 
-<a name="boilerplates.hellogrpc.v2.CreateUserResponse"></a>
+<a name="helloproto.v2.CreateUserResponse"></a>
 
 ### CreateUserResponse
 
@@ -56,14 +56,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| user | [User](#boilerplates.hellogrpc.v2.User) |  |  |
+| user | [User](#helloproto.v2.User) |  |  |
 
 
 
 
 
 
-<a name="boilerplates.hellogrpc.v2.HelloRequest"></a>
+<a name="helloproto.v2.HelloRequest"></a>
 
 ### HelloRequest
 
@@ -78,7 +78,7 @@
 
 
 
-<a name="boilerplates.hellogrpc.v2.HelloResponse"></a>
+<a name="helloproto.v2.HelloResponse"></a>
 
 ### HelloResponse
 
@@ -100,15 +100,15 @@
  
 
 
-<a name="boilerplates.hellogrpc.v2.HelloAPI"></a>
+<a name="helloproto.v2.HelloAPI"></a>
 
 ### HelloAPI
 
 
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
-| CreateUser | [CreateUserRequest](#boilerplates.hellogrpc.v2.CreateUserRequest) | [CreateUserResponse](#boilerplates.hellogrpc.v2.CreateUserResponse) |  |
-| Hello | [HelloRequest](#boilerplates.hellogrpc.v2.HelloRequest) | [HelloResponse](#boilerplates.hellogrpc.v2.HelloResponse) |  |
+| CreateUser | [CreateUserRequest](#helloproto.v2.CreateUserRequest) | [CreateUserResponse](#helloproto.v2.CreateUserResponse) |  |
+| Hello | [HelloRequest](#helloproto.v2.HelloRequest) | [HelloResponse](#helloproto.v2.HelloResponse) |  |
 
  
 
@@ -121,7 +121,7 @@
 
 
 
-<a name="boilerplates.hellogrpc.v2.User"></a>
+<a name="helloproto.v2.User"></a>
 
 ### User
 This is a leading comment for a message
@@ -134,11 +134,11 @@ This is a leading comment for a message
 | age | [int32](#int32) |  |  |
 | wink_id | [string](#string) |  | unique value for each user |
 | country | [string](#string) |  |  |
-| gender | [GenderType](#boilerplates.hellogrpc.v2.GenderType) |  |  |
+| gender | [GenderType](#helloproto.v2.GenderType) |  |  |
 | about | [string](#string) |  |  |
-| auth_type | [AuthType](#boilerplates.hellogrpc.v2.AuthType) |  |  |
+| auth_type | [AuthType](#helloproto.v2.AuthType) |  |  |
 | birthday | [string](#string) |  | birthday of this user |
-| deletion_reason | [DeletionReason](#boilerplates.hellogrpc.v2.DeletionReason) |  |  |
+| deletion_reason | [DeletionReason](#helloproto.v2.DeletionReason) |  |  |
 | create_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
 | update_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
 | delete_time | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
@@ -151,7 +151,7 @@ This is a leading comment for a message
  
 
 
-<a name="boilerplates.hellogrpc.v2.AuthType"></a>
+<a name="helloproto.v2.AuthType"></a>
 
 ### AuthType
 
@@ -164,7 +164,7 @@ This is a leading comment for a message
 
 
 
-<a name="boilerplates.hellogrpc.v2.DeletionReason"></a>
+<a name="helloproto.v2.DeletionReason"></a>
 
 ### DeletionReason
 
@@ -185,7 +185,7 @@ This is a leading comment for a message
 
 
 
-<a name="boilerplates.hellogrpc.v2.GenderType"></a>
+<a name="helloproto.v2.GenderType"></a>
 
 ### GenderType
 

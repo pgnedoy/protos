@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package boilerplates.hellogrpc.v1;
+package helloproto.v1;
 
-option go_package = "hellogrpcv1";
+option go_package = "helloprotov1";
 
 import "google/protobuf/timestamp.proto";
 
