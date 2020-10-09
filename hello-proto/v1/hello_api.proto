@@ -31,7 +31,7 @@ message HelloResponse {
 
 message CreateUserRequest {
   string auth_id = 1;
-  string auth_type = 2;
+  int32 auth_type = 2;
   string name = 3;
   string country = 5;
   string interest = 6;
