@@ -42,6 +42,7 @@
 | name | [string](#string) |  |  |
 | age | [int32](#int32) |  |  |
 | country | [string](#string) |  |  |
+| interest | [string](#string) |  |  |
 
 
 
