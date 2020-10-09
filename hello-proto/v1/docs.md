@@ -40,7 +40,7 @@
 | auth_id | [string](#string) |  |  |
 | auth_type | [AuthType](#helloproto.v1.AuthType) |  |  |
 | name | [string](#string) |  |  |
-| age | [int32](#int32) |  |  |
+| gender | [string](#string) |  |  |
 | country | [string](#string) |  |  |
 | interest | [string](#string) |  |  |
 

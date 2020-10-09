@@ -33,7 +33,7 @@ message CreateUserRequest {
   string auth_id = 1;
   AuthType auth_type = 2;
   string name = 3;
-  int32 age = 4;
+  string gender = 4;
   string country = 5;
   string interest = 6;
 }
