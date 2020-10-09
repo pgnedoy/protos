@@ -35,6 +35,7 @@ message CreateUserRequest {
   string name = 3;
   int32 age = 4;
   string country = 5;
+  string interest = 6;
 }
 
 message CreateUserResponse {
